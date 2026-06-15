@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Customer Subscription",
+ "module": "Pesatech CRM",
+ "owner": "Administrator",
+ "naming_rule": "Expression",
+ "autoname": "format:SUB-{YYYY}-{#####}",
+ "field_order": [
+  "s_sec",
+  "customer",
+  "pricing_plan",
+  "start_date",
+  "renewal_date",
+  "cb",
+  "status",
+  "days_to_renewal",
+  "renewal_due",
+  "mrr"
+ ],
+ "fields": [
+  {
+   "fieldname": "s_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "pricing_plan",
+   "fieldtype": "Link",
+   "label": "Pricing Plan",
+   "options": "Pricing Plan"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date"
+  },
+  {
+   "fieldname": "renewal_date",
+   "fieldtype": "Date",
+   "label": "Renewal Date",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Active\nRenewed\nChurned\nSuspended",
+   "default": "Active",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "days_to_renewal",
+   "fieldtype": "Int",
+   "label": "Days to Renewal",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "renewal_due",
+   "fieldtype": "Check",
+   "label": "Renewal Due",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "mrr",
+   "fieldtype": "Currency",
+   "label": "Monthly Recurring Revenue"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Customer Success",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Relationship Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Product Delivery Lead",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ]
+}

@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Sales Marketing Settings",
+ "module": "Pesatech Sales Marketing",
+ "owner": "Administrator",
+ "naming_rule": "",
+ "autoname": "",
+ "field_order": [
+  "d_sec",
+  "discount_approval_threshold",
+  "default_commission_rate",
+  "cb",
+  "marketing_budget",
+  "l_sec",
+  "mql_score_threshold",
+  "sql_score_threshold"
+ ],
+ "fields": [
+  {
+   "fieldname": "d_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "discount_approval_threshold",
+   "fieldtype": "Percent",
+   "label": "Discount Approval Threshold (%)",
+   "default": "10",
+   "description": "Discounts above this require MD approval."
+  },
+  {
+   "fieldname": "default_commission_rate",
+   "fieldtype": "Percent",
+   "label": "Default Agent Commission (%)",
+   "default": "5"
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "marketing_budget",
+   "fieldtype": "Currency",
+   "label": "Quarterly Marketing Budget (KES)"
+  },
+  {
+   "fieldname": "l_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "mql_score_threshold",
+   "fieldtype": "Int",
+   "label": "MQL Score Threshold",
+   "default": "50"
+  },
+  {
+   "fieldname": "sql_score_threshold",
+   "fieldtype": "Int",
+   "label": "SQL Score Threshold",
+   "default": "75"
+  }
+ ],
+ "istable": 0,
+ "issingle": 1,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Sales Lead",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Relationship Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Marketing Lead",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ]
+}

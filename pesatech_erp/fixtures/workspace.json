@@ -1,0 +1,65 @@
+[
+ {
+  "doctype": "Workspace",
+  "name": "Control Tower",
+  "title": "Control Tower",
+  "label": "Control Tower",
+  "module": "Pesatech Control Tower",
+  "public": 1,
+  "is_hidden": 0,
+  "icon": "crm",
+  "sequence_id": 100.0,
+  "content": "[{\"id\": \"h1\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Control Tower</b></span>\", \"col\": 12}}, {\"id\": \"n1\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"CT Activities Pending\", \"col\": 3}}, {\"id\": \"n2\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"CT Activities Overdue\", \"col\": 3}}, {\"id\": \"n3\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"CT Objectives At Risk\", \"col\": 3}}, {\"id\": \"n4\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"CT Avg Completion\", \"col\": 3}}, {\"id\": \"ch\", \"type\": \"chart\", \"data\": {\"chart_name\": \"CT Activity Status\", \"col\": 12}}, {\"id\": \"h2\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h5\\\"><b>Manage</b></span>\", \"col\": 12}}, {\"id\": \"s1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"My Activities\", \"col\": 3}}, {\"id\": \"s2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Strategic Objectives\", \"col\": 3}}, {\"id\": \"s3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Weekly Reviews\", \"col\": 3}}, {\"id\": \"s4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Leaderboard\", \"col\": 3}}]",
+  "number_cards": [
+   {
+    "number_card_name": "CT Activities Pending",
+    "label": "Activities Pending"
+   },
+   {
+    "number_card_name": "CT Activities Overdue",
+    "label": "Activities Overdue"
+   },
+   {
+    "number_card_name": "CT Objectives At Risk",
+    "label": "Objectives At Risk"
+   },
+   {
+    "number_card_name": "CT Avg Completion",
+    "label": "Avg Completion Rate"
+   }
+  ],
+  "charts": [
+   {
+    "chart_name": "CT Activity Status",
+    "label": "Activity Status"
+   }
+  ],
+  "shortcuts": [
+   {
+    "type": "DocType",
+    "link_to": "Employee Activity",
+    "label": "My Activities",
+    "color": "Blue"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Strategic Objective",
+    "label": "Strategic Objectives",
+    "color": "Green"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Weekly Review",
+    "label": "Weekly Reviews",
+    "color": "Yellow"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Tower Member",
+    "label": "Leaderboard",
+    "color": "Purple"
+   }
+  ],
+  "links": []
+ }
+]

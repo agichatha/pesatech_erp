@@ -1,0 +1,16 @@
+[
+ {
+  "doctype": "Dashboard Chart",
+  "name": "CT Activity Status",
+  "chart_name": "CT Activity Status",
+  "module": "Pesatech Control Tower",
+  "chart_type": "Group By",
+  "document_type": "Employee Activity",
+  "group_by_type": "Count",
+  "group_by_based_on": "status",
+  "type": "Donut",
+  "is_public": 1,
+  "timeseries": 0,
+  "filters_json": "[]"
+ }
+]

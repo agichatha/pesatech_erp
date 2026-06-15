@@ -1,0 +1,88 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Payroll Entry Line",
+ "module": "Pesatech HCM",
+ "owner": "Administrator",
+ "naming_rule": "",
+ "autoname": "",
+ "field_order": [
+  "employee",
+  "gross_pay",
+  "paye",
+  "nssf",
+  "shif",
+  "housing_levy",
+  "total_deductions",
+  "net_pay"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "gross_pay",
+   "fieldtype": "Currency",
+   "label": "Gross Pay",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "paye",
+   "fieldtype": "Currency",
+   "label": "PAYE",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "nssf",
+   "fieldtype": "Currency",
+   "label": "NSSF",
+   "read_only": 1
+  },
+  {
+   "fieldname": "shif",
+   "fieldtype": "Currency",
+   "label": "SHIF",
+   "read_only": 1
+  },
+  {
+   "fieldname": "housing_levy",
+   "fieldtype": "Currency",
+   "label": "Housing Levy",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_deductions",
+   "fieldtype": "Currency",
+   "label": "Total Deductions",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "net_pay",
+   "fieldtype": "Currency",
+   "label": "Net Pay",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ],
+ "istable": 1,
+ "issingle": 0,
+ "is_submittable": 0,
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": []
+}

@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Budget",
+ "module": "Pesatech Finance",
+ "owner": "Administrator",
+ "naming_rule": "Expression",
+ "autoname": "format:BUD-{fiscal_year}-{#####}",
+ "field_order": [
+  "b_sec",
+  "budget_name",
+  "fiscal_year",
+  "cost_center",
+  "cb",
+  "status",
+  "total_budget",
+  "lines_sec",
+  "lines"
+ ],
+ "fields": [
+  {
+   "fieldname": "b_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "budget_name",
+   "fieldtype": "Data",
+   "label": "Budget Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "fiscal_year",
+   "fieldtype": "Data",
+   "label": "Fiscal Year",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Data",
+   "label": "Default Cost Center"
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nApproved\nClosed",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "total_budget",
+   "fieldtype": "Currency",
+   "label": "Total Budget",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "lines_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "Lines",
+   "options": "Budget Line"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 1,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Finance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Finance Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ],
+ "title_field": "budget_name"
+}

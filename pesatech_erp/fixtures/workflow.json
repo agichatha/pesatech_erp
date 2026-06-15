@@ -1,0 +1,515 @@
+[
+ {
+  "doctype": "Workflow",
+  "name": "Supplier Prequalification Approval",
+  "workflow_name": "Supplier Prequalification Approval",
+  "document_type": "Supplier Prequalification",
+  "workflow_state_field": "status",
+  "is_active": 1,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "state": "Draft",
+    "allow_edit": "Procurement Officer",
+    "doc_status": "0",
+    "style": ""
+   },
+   {
+    "state": "Submitted",
+    "allow_edit": "Procurement Officer",
+    "doc_status": "0",
+    "style": "Warning"
+   },
+   {
+    "state": "Approved",
+    "allow_edit": "Procurement Manager",
+    "doc_status": "1",
+    "style": "Success"
+   },
+   {
+    "state": "Rejected",
+    "allow_edit": "Procurement Manager",
+    "doc_status": "1",
+    "style": "Danger"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Submit for Review",
+    "state": "Draft",
+    "next_state": "Submitted",
+    "allowed": "Procurement Officer"
+   },
+   {
+    "action": "Approve",
+    "state": "Submitted",
+    "next_state": "Approved",
+    "allowed": "Procurement Manager"
+   },
+   {
+    "action": "Reject",
+    "state": "Submitted",
+    "next_state": "Rejected",
+    "allowed": "Procurement Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Sourcing Event Approval",
+  "workflow_name": "Sourcing Event Approval",
+  "document_type": "Sourcing Event",
+  "workflow_state_field": "status",
+  "is_active": 1,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "state": "Draft",
+    "allow_edit": "Procurement Officer",
+    "doc_status": "0",
+    "style": ""
+   },
+   {
+    "state": "Published",
+    "allow_edit": "Procurement Manager",
+    "doc_status": "1",
+    "style": "Success"
+   },
+   {
+    "state": "Closed",
+    "allow_edit": "Procurement Officer",
+    "doc_status": "1",
+    "style": "Warning"
+   },
+   {
+    "state": "Under Evaluation",
+    "allow_edit": "Procurement Officer",
+    "doc_status": "1",
+    "style": "Inverse"
+   },
+   {
+    "state": "Awarded",
+    "allow_edit": "Procurement Manager",
+    "doc_status": "1",
+    "style": "Success"
+   },
+   {
+    "state": "Cancelled",
+    "allow_edit": "Procurement Manager",
+    "doc_status": "2",
+    "style": "Danger"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Publish",
+    "state": "Draft",
+    "next_state": "Published",
+    "allowed": "Procurement Manager"
+   },
+   {
+    "action": "Close Bidding",
+    "state": "Published",
+    "next_state": "Closed",
+    "allowed": "Procurement Officer"
+   },
+   {
+    "action": "Open & Evaluate",
+    "state": "Closed",
+    "next_state": "Under Evaluation",
+    "allowed": "Procurement Officer"
+   },
+   {
+    "action": "Mark Awarded",
+    "state": "Under Evaluation",
+    "next_state": "Awarded",
+    "allowed": "Procurement Manager"
+   },
+   {
+    "action": "Cancel",
+    "state": "Published",
+    "next_state": "Cancelled",
+    "allowed": "Procurement Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Procurement Award Approval",
+  "workflow_name": "Procurement Award Approval",
+  "document_type": "Procurement Award",
+  "workflow_state_field": "status",
+  "is_active": 1,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "state": "Draft",
+    "allow_edit": "Procurement Officer",
+    "doc_status": "0",
+    "style": ""
+   },
+   {
+    "state": "Pending Approval",
+    "allow_edit": "Procurement Officer",
+    "doc_status": "0",
+    "style": "Warning"
+   },
+   {
+    "state": "Approved",
+    "allow_edit": "Procurement Manager",
+    "doc_status": "1",
+    "style": "Success"
+   },
+   {
+    "state": "Notified",
+    "allow_edit": "Procurement Officer",
+    "doc_status": "1",
+    "style": "Inverse"
+   },
+   {
+    "state": "Contracted",
+    "allow_edit": "Procurement Manager",
+    "doc_status": "1",
+    "style": "Success"
+   },
+   {
+    "state": "Cancelled",
+    "allow_edit": "Procurement Manager",
+    "doc_status": "2",
+    "style": "Danger"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Submit for Approval",
+    "state": "Draft",
+    "next_state": "Pending Approval",
+    "allowed": "Procurement Officer"
+   },
+   {
+    "action": "Approve Award",
+    "state": "Pending Approval",
+    "next_state": "Approved",
+    "allowed": "Procurement Manager"
+   },
+   {
+    "action": "Send Notifications",
+    "state": "Approved",
+    "next_state": "Notified",
+    "allowed": "Procurement Officer"
+   },
+   {
+    "action": "Sign Contract",
+    "state": "Notified",
+    "next_state": "Contracted",
+    "allowed": "Procurement Manager"
+   },
+   {
+    "action": "Cancel",
+    "state": "Pending Approval",
+    "next_state": "Cancelled",
+    "allowed": "Procurement Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Budget Approval",
+  "workflow_name": "Budget Approval",
+  "document_type": "Budget",
+  "workflow_state_field": "status",
+  "is_active": 1,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "state": "Draft",
+    "allow_edit": "Finance Officer",
+    "doc_status": "0",
+    "style": ""
+   },
+   {
+    "state": "Submitted",
+    "allow_edit": "Finance Officer",
+    "doc_status": "0",
+    "style": "Warning"
+   },
+   {
+    "state": "Approved",
+    "allow_edit": "Finance Manager",
+    "doc_status": "1",
+    "style": "Success"
+   },
+   {
+    "state": "Closed",
+    "allow_edit": "Finance Manager",
+    "doc_status": "1",
+    "style": "Inverse"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Submit for Approval",
+    "state": "Draft",
+    "next_state": "Submitted",
+    "allowed": "Finance Officer"
+   },
+   {
+    "action": "Approve",
+    "state": "Submitted",
+    "next_state": "Approved",
+    "allowed": "Finance Manager"
+   },
+   {
+    "action": "Close",
+    "state": "Approved",
+    "next_state": "Closed",
+    "allowed": "Finance Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Position Contract Approval",
+  "workflow_name": "Position Contract Approval",
+  "document_type": "Position Contract",
+  "workflow_state_field": "status",
+  "is_active": 1,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "state": "Draft",
+    "allow_edit": "HR Officer",
+    "doc_status": "0",
+    "style": ""
+   },
+   {
+    "state": "Active",
+    "allow_edit": "HR Manager",
+    "doc_status": "1",
+    "style": "Success"
+   },
+   {
+    "state": "Signed",
+    "allow_edit": "HR Manager",
+    "doc_status": "1",
+    "style": "Success"
+   },
+   {
+    "state": "Vacant",
+    "allow_edit": "HR Manager",
+    "doc_status": "0",
+    "style": "Warning"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Activate",
+    "state": "Draft",
+    "next_state": "Active",
+    "allowed": "HR Manager"
+   },
+   {
+    "action": "Record Signature",
+    "state": "Active",
+    "next_state": "Signed",
+    "allowed": "HR Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Payroll Run Approval",
+  "workflow_name": "Payroll Run Approval",
+  "document_type": "Payroll Run",
+  "workflow_state_field": "status",
+  "is_active": 1,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "state": "Draft",
+    "allow_edit": "HR Officer",
+    "doc_status": "0",
+    "style": ""
+   },
+   {
+    "state": "Processed",
+    "allow_edit": "HR Manager",
+    "doc_status": "1",
+    "style": "Success"
+   },
+   {
+    "state": "Paid",
+    "allow_edit": "Finance Manager",
+    "doc_status": "1",
+    "style": "Success"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Process",
+    "state": "Draft",
+    "next_state": "Processed",
+    "allowed": "HR Manager"
+   },
+   {
+    "action": "Mark Paid",
+    "state": "Processed",
+    "next_state": "Paid",
+    "allowed": "Finance Manager"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Sales Deal Approval",
+  "workflow_name": "Sales Deal Approval",
+  "document_type": "Sales Deal",
+  "workflow_state_field": "funnel_stage",
+  "is_active": 1,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "state": "Proposal",
+    "allow_edit": "Relationship Manager",
+    "doc_status": "0",
+    "style": ""
+   },
+   {
+    "state": "Negotiation",
+    "allow_edit": "Sales Lead",
+    "doc_status": "0",
+    "style": "Warning"
+   },
+   {
+    "state": "Closed Won",
+    "allow_edit": "Sales Lead",
+    "doc_status": "1",
+    "style": "Success"
+   },
+   {
+    "state": "Closed Lost",
+    "allow_edit": "Sales Lead",
+    "doc_status": "1",
+    "style": "Danger"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Move to Negotiation",
+    "state": "Proposal",
+    "next_state": "Negotiation",
+    "allowed": "Relationship Manager"
+   },
+   {
+    "action": "Win",
+    "state": "Negotiation",
+    "next_state": "Closed Won",
+    "allowed": "Sales Lead"
+   },
+   {
+    "action": "Lose",
+    "state": "Negotiation",
+    "next_state": "Closed Lost",
+    "allowed": "Sales Lead"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Onboarding Project Approval",
+  "workflow_name": "Onboarding Project Approval",
+  "document_type": "Onboarding Project",
+  "workflow_state_field": "status",
+  "is_active": 1,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "state": "Initiation",
+    "allow_edit": "Customer Success",
+    "doc_status": "0",
+    "style": ""
+   },
+   {
+    "state": "In Progress",
+    "allow_edit": "Product Delivery Lead",
+    "doc_status": "0",
+    "style": "Warning"
+   },
+   {
+    "state": "Live",
+    "allow_edit": "Product Delivery Lead",
+    "doc_status": "1",
+    "style": "Success"
+   },
+   {
+    "state": "On Hold",
+    "allow_edit": "Customer Success",
+    "doc_status": "0",
+    "style": "Danger"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Start Implementation",
+    "state": "Initiation",
+    "next_state": "In Progress",
+    "allowed": "Product Delivery Lead"
+   },
+   {
+    "action": "Go Live",
+    "state": "In Progress",
+    "next_state": "Live",
+    "allowed": "Product Delivery Lead"
+   },
+   {
+    "action": "Put On Hold",
+    "state": "In Progress",
+    "next_state": "On Hold",
+    "allowed": "Customer Success"
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Weekly Review Sign-off",
+  "workflow_name": "Weekly Review Sign-off",
+  "document_type": "Weekly Review",
+  "workflow_state_field": "status",
+  "is_active": 1,
+  "send_email_alert": 0,
+  "states": [
+   {
+    "state": "Draft",
+    "allow_edit": "Employee",
+    "doc_status": "0",
+    "style": ""
+   },
+   {
+    "state": "Submitted",
+    "allow_edit": "Employee",
+    "doc_status": "0",
+    "style": "Warning"
+   },
+   {
+    "state": "Signed Off",
+    "allow_edit": "Line Manager",
+    "doc_status": "1",
+    "style": "Success"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Submit",
+    "state": "Draft",
+    "next_state": "Submitted",
+    "allowed": "Employee"
+   },
+   {
+    "action": "Sign Off",
+    "state": "Submitted",
+    "next_state": "Signed Off",
+    "allowed": "Line Manager"
+   }
+  ]
+ }
+]

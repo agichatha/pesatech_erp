@@ -1,0 +1,157 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Procurement Award",
+ "module": "Pesatech Procurement",
+ "owner": "Administrator",
+ "naming_rule": "Expression",
+ "autoname": "format:AWD-{YYYY}-{#####}",
+ "field_order": [
+  "aw_sec",
+  "sourcing_event",
+  "bid",
+  "supplier",
+  "award_value",
+  "cb",
+  "approval_level",
+  "status",
+  "standstill_until",
+  "notification_sent",
+  "notes_sec",
+  "award_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "aw_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sourcing_event",
+   "fieldtype": "Link",
+   "label": "Sourcing Event",
+   "options": "Sourcing Event",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "bid",
+   "fieldtype": "Link",
+   "label": "Winning Bid",
+   "options": "Bid",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Awarded Supplier",
+   "options": "Supplier",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "award_value",
+   "fieldtype": "Currency",
+   "label": "Award Value (KES)",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "approval_level",
+   "fieldtype": "Data",
+   "label": "Required Approval Level",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nPending Approval\nApproved\nNotified\nContracted\nCancelled",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "standstill_until",
+   "fieldtype": "Date",
+   "label": "Standstill Until",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notification_sent",
+   "fieldtype": "Check",
+   "label": "Bidder Notifications Sent",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "award_notes",
+   "fieldtype": "Small Text",
+   "label": "Award Notes"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 1,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Procurement Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Procurement Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ]
+}

@@ -1,0 +1,146 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Cooperative Partner",
+ "module": "Pesatech Sales Marketing",
+ "owner": "Administrator",
+ "naming_rule": "By fieldname",
+ "autoname": "field:partner_name",
+ "field_order": [
+  "p_sec",
+  "partner_name",
+  "partner_type",
+  "region",
+  "cb",
+  "relationship_status",
+  "primary_contact",
+  "contact_phone",
+  "n_sec",
+  "engagement_notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "p_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "partner_name",
+   "fieldtype": "Data",
+   "label": "Partner Name",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "partner_type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "SACCO Union\nCooperative Federation\nApex Body\nReseller Partner\nDonor Programme",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "region",
+   "fieldtype": "Data",
+   "label": "Region",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "relationship_status",
+   "fieldtype": "Select",
+   "label": "Relationship Status",
+   "options": "Prospect\nActive\nDormant",
+   "default": "Prospect",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "primary_contact",
+   "fieldtype": "Data",
+   "label": "Primary Contact"
+  },
+  {
+   "fieldname": "contact_phone",
+   "fieldtype": "Data",
+   "label": "Phone"
+  },
+  {
+   "fieldname": "n_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "engagement_notes",
+   "fieldtype": "Small Text",
+   "label": "Engagement Notes"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Sales Lead",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Relationship Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Marketing Lead",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ]
+}

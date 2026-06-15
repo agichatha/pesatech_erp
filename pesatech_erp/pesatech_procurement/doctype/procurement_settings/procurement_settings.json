@@ -1,0 +1,130 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Procurement Settings",
+ "module": "Pesatech Procurement",
+ "owner": "Administrator",
+ "naming_rule": "",
+ "autoname": "",
+ "field_order": [
+  "thresholds_sec",
+  "low_value_max",
+  "rfq_max",
+  "cb",
+  "standstill_days",
+  "enforce_prequalification",
+  "approval_sec",
+  "approval_threshold_officer",
+  "approval_threshold_manager"
+ ],
+ "fields": [
+  {
+   "fieldname": "thresholds_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "low_value_max",
+   "fieldtype": "Currency",
+   "label": "Low-Value Procurement Max",
+   "default": "50000",
+   "description": "At or below this estimated value, low-value procurement may be used."
+  },
+  {
+   "fieldname": "rfq_max",
+   "fieldtype": "Currency",
+   "label": "RFQ Max",
+   "default": "1000000",
+   "description": "Above low-value and up to this value, use RFQ; above this, open tender."
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "standstill_days",
+   "fieldtype": "Int",
+   "label": "Standstill Period (days)",
+   "default": "14"
+  },
+  {
+   "fieldname": "enforce_prequalification",
+   "fieldtype": "Check",
+   "label": "Enforce Supplier Prequalification",
+   "default": "1"
+  },
+  {
+   "fieldname": "approval_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "approval_threshold_officer",
+   "fieldtype": "Currency",
+   "label": "Procurement Officer Limit",
+   "default": "20000"
+  },
+  {
+   "fieldname": "approval_threshold_manager",
+   "fieldtype": "Currency",
+   "label": "Managing Director Limit",
+   "default": "100000",
+   "description": "Above this value, awards require Director / Board approval."
+  }
+ ],
+ "istable": 0,
+ "issingle": 1,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Procurement Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Procurement Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ]
+}

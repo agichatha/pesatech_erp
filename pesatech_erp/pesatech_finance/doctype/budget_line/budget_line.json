@@ -1,0 +1,81 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Budget Line",
+ "module": "Pesatech Finance",
+ "owner": "Administrator",
+ "naming_rule": "",
+ "autoname": "",
+ "field_order": [
+  "account",
+  "cost_center",
+  "period",
+  "budget_amount",
+  "committed_amount",
+  "actual_amount",
+  "available_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "account",
+   "fieldtype": "Data",
+   "label": "Expense Account",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Data",
+   "label": "Cost Center",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Select",
+   "label": "Period",
+   "options": "Annual\nQ1\nQ2\nQ3\nQ4",
+   "default": "Annual",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "budget_amount",
+   "fieldtype": "Currency",
+   "label": "Budget",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "committed_amount",
+   "fieldtype": "Currency",
+   "label": "Committed",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "actual_amount",
+   "fieldtype": "Currency",
+   "label": "Actual",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "available_amount",
+   "fieldtype": "Currency",
+   "label": "Available",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ],
+ "istable": 1,
+ "issingle": 0,
+ "is_submittable": 0,
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": []
+}

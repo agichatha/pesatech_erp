@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Control Tower — static preview</title>
+<style>
+  body{font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#222;margin:0;background:#fff;}
+  .ct-wrap{max-width:1000px;margin:0 auto;padding:28px 20px;}
+  .note{background:#fff8e6;border:1px solid #f0d28a;color:#7a5b00;font-size:13px;border-radius:8px;padding:10px 14px;margin-bottom:20px;}
+  h2{margin:0 0 2px;font-weight:600;}
+  .muted{color:#8a8a8a;font-size:14px;margin:0 0 4px;}
+  .ct-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin:20px 0;}
+  .ct-card{background:#f7f7f5;border-radius:10px;padding:14px 16px;}
+  .ct-card .lbl{font-size:13px;color:#6b6b6b;}
+  .ct-card .val{font-size:26px;font-weight:600;}
+  .ct-sec{font-size:14px;font-weight:600;margin:26px 0 10px;}
+  .ct-obj{margin-bottom:12px;}
+  .ct-obj .row{display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px;}
+  .ct-bar{height:8px;background:#e7e7e3;border-radius:5px;overflow:hidden;}
+  .ct-bar>span{display:block;height:100%;}
+  table.ct-lead{width:100%;border-collapse:collapse;font-size:13px;}
+  table.ct-lead th,table.ct-lead td{text-align:left;padding:8px 10px;border-bottom:1px solid #ececec;}
+  table.ct-lead th{color:#6b6b6b;font-weight:600;}
+</style>
+</head>
+<body>
+<div class="ct-wrap">
+  <div class="note">Static preview with sample data. The real page renders inside ERPNext at <b>/control-tower</b> with live figures.</div>
+  <h2>Pesatech Control Tower</h2>
+  <p class="muted">Strategy execution &middot; live leadership view</p>
+
+  <div class="ct-cards">
+    <div class="ct-card"><div class="lbl">Activities pending</div><div class="val">34</div></div>
+    <div class="ct-card"><div class="lbl">Activities overdue</div><div class="val" style="color:#c0392b;">7</div></div>
+    <div class="ct-card"><div class="lbl">Activities done</div><div class="val" style="color:#1d9e75;">128</div></div>
+    <div class="ct-card"><div class="lbl">Objectives tracked</div><div class="val">5</div></div>
+  </div>
+
+  <div class="ct-sec">Strategic objective progress</div>
+  <div id="objs"></div>
+
+  <div class="ct-sec">Leaderboard</div>
+  <table class="ct-lead">
+    <thead><tr><th>#</th><th>Member</th><th>Points</th><th>Streak</th><th>Completion</th></tr></thead>
+    <tbody id="lead"></tbody>
+  </table>
+
+  <div class="ct-sec">Activity status</div>
+  <div style="position:relative;height:220px;max-width:360px;"><canvas id="ctStatus"></canvas></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+  var objectives=[
+    {n:"Innovation & Product Leadership",p:72},{n:"Market Expansion",p:64},
+    {n:"Customer Experience Excellence",p:88},{n:"Operational Excellence & Governance",p:70},
+    {n:"Talent Development & Culture",p:81}];
+  var board=[["Mary Otieno",520,14,95],["Jane Wanjiru",480,4,88],["Peter Kamau",410,7,79],["Asha Nur",390,9,86]];
+  function col(p){return p>=80?"#1D9E75":p>=70?"#EF9F27":"#E24B4A";}
+  document.getElementById("objs").innerHTML=objectives.map(function(o){
+    return '<div class="ct-obj"><div class="row"><span>'+o.n+'</span><span style="color:'+col(o.p)+';font-weight:600;">'+o.p+'%</span></div>'+
+      '<div class="ct-bar"><span style="width:'+o.p+'%;background:'+col(o.p)+';"></span></div></div>';}).join("");
+  document.getElementById("lead").innerHTML=board.map(function(m,i){
+    return '<tr><td>'+(i+1)+'</td><td>'+m[0]+'</td><td>'+m[1]+'</td><td>'+m[2]+'</td><td>'+m[3]+'%</td></tr>';}).join("");
+  new Chart(document.getElementById("ctStatus"),{type:"doughnut",
+    data:{labels:["Pending","Overdue","Done"],datasets:[{data:[34,7,128],backgroundColor:["#378ADD","#E24B4A","#1D9E75"]}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{position:"right"}}}});
+</script>
+</body>
+</html>

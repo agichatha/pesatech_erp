@@ -1,0 +1,175 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Onboarding Project",
+ "module": "Pesatech CRM",
+ "owner": "Administrator",
+ "naming_rule": "Expression",
+ "autoname": "format:ONP-{YYYY}-{#####}",
+ "field_order": [
+  "c_sec",
+  "customer",
+  "solution_suite",
+  "objective",
+  "cb",
+  "status",
+  "go_live_date",
+  "progress",
+  "project_owner",
+  "p_sec",
+  "phases",
+  "scope_sec",
+  "scope",
+  "risks"
+ ],
+ "fields": [
+  {
+   "fieldname": "c_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "solution_suite",
+   "fieldtype": "Select",
+   "label": "Solution Suite",
+   "options": "Financial Institutions Suite\nCooperative Management Suite\nDairy Automation System (QBMPS)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "objective",
+   "fieldtype": "Small Text",
+   "label": "Objective & Success Measures"
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Initiation\nIn Progress\nLive\nOn Hold",
+   "default": "Initiation",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "go_live_date",
+   "fieldtype": "Date",
+   "label": "Target Go-Live"
+  },
+  {
+   "fieldname": "progress",
+   "fieldtype": "Percent",
+   "label": "Progress",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "project_owner",
+   "fieldtype": "Link",
+   "label": "Project Owner",
+   "options": "User"
+  },
+  {
+   "fieldname": "p_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "phases",
+   "fieldtype": "Table",
+   "label": "Phases",
+   "options": "Onboarding Phase"
+  },
+  {
+   "fieldname": "scope_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "scope",
+   "fieldtype": "Small Text",
+   "label": "Scope & Integrations"
+  },
+  {
+   "fieldname": "risks",
+   "fieldtype": "Small Text",
+   "label": "Risks & Assumptions"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 1,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Customer Success",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Relationship Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Product Delivery Lead",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ],
+ "title_field": "customer"
+}

@@ -1,0 +1,158 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "HCM Settings",
+ "module": "Pesatech HCM",
+ "owner": "Administrator",
+ "naming_rule": "",
+ "autoname": "",
+ "field_order": [
+  "stat_sec",
+  "nssf_rate",
+  "nssf_cap",
+  "shif_rate",
+  "cb",
+  "housing_levy_rate",
+  "personal_relief",
+  "training_completion_target",
+  "fin_sec",
+  "post_payroll_to_finance",
+  "payroll_budget",
+  "cb",
+  "payroll_account",
+  "payroll_cost_center"
+ ],
+ "fields": [
+  {
+   "fieldname": "stat_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "nssf_rate",
+   "fieldtype": "Float",
+   "label": "NSSF Rate (%)",
+   "default": "6"
+  },
+  {
+   "fieldname": "nssf_cap",
+   "fieldtype": "Currency",
+   "label": "NSSF Pensionable Cap (KES)",
+   "default": "72000"
+  },
+  {
+   "fieldname": "shif_rate",
+   "fieldtype": "Float",
+   "label": "SHIF Rate (%)",
+   "default": "2.75"
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "housing_levy_rate",
+   "fieldtype": "Float",
+   "label": "Housing Levy Rate (%)",
+   "default": "1.5"
+  },
+  {
+   "fieldname": "personal_relief",
+   "fieldtype": "Currency",
+   "label": "Monthly Personal Relief (KES)",
+   "default": "2400"
+  },
+  {
+   "fieldname": "training_completion_target",
+   "fieldtype": "Percent",
+   "label": "Training Completion Target",
+   "default": "90"
+  },
+  {
+   "fieldname": "fin_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "post_payroll_to_finance",
+   "fieldtype": "Check",
+   "label": "Post Payroll Cost to Finance",
+   "default": "1"
+  },
+  {
+   "fieldname": "payroll_budget",
+   "fieldtype": "Link",
+   "label": "Payroll Budget",
+   "options": "Budget"
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payroll_account",
+   "fieldtype": "Data",
+   "label": "Payroll Expense Account"
+  },
+  {
+   "fieldname": "payroll_cost_center",
+   "fieldtype": "Data",
+   "label": "Payroll Cost Center"
+  }
+ ],
+ "istable": 0,
+ "issingle": 1,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "HR Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ]
+}

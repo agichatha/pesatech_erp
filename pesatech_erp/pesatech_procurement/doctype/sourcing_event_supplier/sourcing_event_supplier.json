@@ -1,0 +1,54 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Sourcing Event Supplier",
+ "module": "Pesatech Procurement",
+ "owner": "Administrator",
+ "naming_rule": "",
+ "autoname": "",
+ "field_order": [
+  "supplier",
+  "prequalified",
+  "invited_on",
+  "responded"
+ ],
+ "fields": [
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "prequalified",
+   "fieldtype": "Check",
+   "label": "Prequalified",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "invited_on",
+   "fieldtype": "Datetime",
+   "label": "Invited On"
+  },
+  {
+   "fieldname": "responded",
+   "fieldtype": "Check",
+   "label": "Responded"
+  }
+ ],
+ "istable": 1,
+ "issingle": 0,
+ "is_submittable": 0,
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": []
+}

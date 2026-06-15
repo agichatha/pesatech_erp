@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Bid Opening Entry",
+ "module": "Pesatech Procurement",
+ "owner": "Administrator",
+ "naming_rule": "",
+ "autoname": "",
+ "field_order": [
+  "bid",
+  "supplier",
+  "bid_value_read",
+  "responsive",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "bid",
+   "fieldtype": "Link",
+   "label": "Bid",
+   "options": "Bid",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "bid_value_read",
+   "fieldtype": "Currency",
+   "label": "Bid Value Read Out",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "responsive",
+   "fieldtype": "Check",
+   "label": "Preliminarily Responsive",
+   "default": "1",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Data",
+   "label": "Remarks"
+  }
+ ],
+ "istable": 1,
+ "issingle": 0,
+ "is_submittable": 0,
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": []
+}

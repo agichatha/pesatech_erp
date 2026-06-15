@@ -1,0 +1,86 @@
+[
+ {
+  "doctype": "Role",
+  "name": "Procurement Officer",
+  "role_name": "Procurement Officer",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Procurement Manager",
+  "role_name": "Procurement Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Evaluation Committee Member",
+  "role_name": "Evaluation Committee Member",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Accounting Officer",
+  "role_name": "Accounting Officer",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Finance Officer",
+  "role_name": "Finance Officer",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Finance Manager",
+  "role_name": "Finance Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "HR Officer",
+  "role_name": "HR Officer",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "HR Manager",
+  "role_name": "HR Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Sales Lead",
+  "role_name": "Sales Lead",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Marketing Lead",
+  "role_name": "Marketing Lead",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Relationship Manager",
+  "role_name": "Relationship Manager",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Customer Success",
+  "role_name": "Customer Success",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Product Delivery Lead",
+  "role_name": "Product Delivery Lead",
+  "desk_access": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Line Manager",
+  "role_name": "Line Manager",
+  "desk_access": 1
+ }
+]

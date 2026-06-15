@@ -1,0 +1,196 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Sales Deal",
+ "module": "Pesatech Sales Marketing",
+ "owner": "Administrator",
+ "naming_rule": "Expression",
+ "autoname": "format:DEAL-{YYYY}-{#####}",
+ "field_order": [
+  "d_sec",
+  "deal_title",
+  "customer",
+  "pipeline_lead",
+  "pricing_plan",
+  "cb",
+  "funnel_stage",
+  "status",
+  "price_sec",
+  "list_price",
+  "discount_pct",
+  "deal_value",
+  "discount_approved_by",
+  "comm_sec",
+  "agent",
+  "commission_rate",
+  "commission_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "d_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "deal_title",
+   "fieldtype": "Data",
+   "label": "Deal Title",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Customer",
+   "options": "Customer",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "pipeline_lead",
+   "fieldtype": "Link",
+   "label": "Pipeline Lead",
+   "options": "Pipeline Lead"
+  },
+  {
+   "fieldname": "pricing_plan",
+   "fieldtype": "Link",
+   "label": "Pricing Plan",
+   "options": "Pricing Plan"
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "funnel_stage",
+   "fieldtype": "Select",
+   "label": "Stage",
+   "options": "Proposal\nNegotiation\nClosed Won\nClosed Lost",
+   "default": "Proposal",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Open\nWon\nLost",
+   "default": "Open"
+  },
+  {
+   "fieldname": "price_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "list_price",
+   "fieldtype": "Currency",
+   "label": "List Price",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "discount_pct",
+   "fieldtype": "Percent",
+   "label": "Discount (%)"
+  },
+  {
+   "fieldname": "deal_value",
+   "fieldtype": "Currency",
+   "label": "Deal Value (KES)",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "discount_approved_by",
+   "fieldtype": "Data",
+   "label": "Discount Approved By"
+  },
+  {
+   "fieldname": "comm_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "agent",
+   "fieldtype": "Link",
+   "label": "Sales Agent",
+   "options": "Sales Agent"
+  },
+  {
+   "fieldname": "commission_rate",
+   "fieldtype": "Percent",
+   "label": "Commission Rate (%)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "commission_amount",
+   "fieldtype": "Currency",
+   "label": "Commission Amount",
+   "read_only": 1
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 1,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Sales Lead",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Relationship Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Marketing Lead",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ],
+ "title_field": "deal_title"
+}

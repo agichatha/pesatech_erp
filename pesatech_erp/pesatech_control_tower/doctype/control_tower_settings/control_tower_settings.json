@@ -1,0 +1,117 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Control Tower Settings",
+ "module": "Pesatech Control Tower",
+ "owner": "Administrator",
+ "naming_rule": "",
+ "autoname": "",
+ "field_order": [
+  "rag_sec",
+  "rag_green",
+  "rag_amber",
+  "cb",
+  "reminder_lead_days",
+  "game_sec",
+  "points_per_task",
+  "require_manager_signoff"
+ ],
+ "fields": [
+  {
+   "fieldname": "rag_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "rag_green",
+   "fieldtype": "Int",
+   "label": "Green at or above",
+   "default": "80"
+  },
+  {
+   "fieldname": "rag_amber",
+   "fieldtype": "Int",
+   "label": "Amber at or above",
+   "default": "70"
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reminder_lead_days",
+   "fieldtype": "Int",
+   "label": "Reminder Lead Days",
+   "default": "1"
+  },
+  {
+   "fieldname": "game_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "points_per_task",
+   "fieldtype": "Int",
+   "label": "Default Points per Task",
+   "default": "10"
+  },
+  {
+   "fieldname": "require_manager_signoff",
+   "fieldtype": "Check",
+   "label": "Require Manager Sign-off (Weekly Review)",
+   "default": "1"
+  }
+ ],
+ "istable": 0,
+ "issingle": 1,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Line Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Employee",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "report": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ]
+}

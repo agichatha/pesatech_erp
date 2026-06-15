@@ -1,0 +1,150 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Finance Settings",
+ "module": "Pesatech Finance",
+ "owner": "Administrator",
+ "naming_rule": "",
+ "autoname": "",
+ "field_order": [
+  "fy_sec",
+  "current_fiscal_year",
+  "default_currency",
+  "cb",
+  "reminder_lead_days",
+  "ctrl_sec",
+  "enable_commitment_control",
+  "block_over_budget",
+  "def_sec",
+  "default_budget",
+  "default_account",
+  "cb",
+  "default_cost_center"
+ ],
+ "fields": [
+  {
+   "fieldname": "fy_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "current_fiscal_year",
+   "fieldtype": "Data",
+   "label": "Current Fiscal Year",
+   "default": "2026"
+  },
+  {
+   "fieldname": "default_currency",
+   "fieldtype": "Data",
+   "label": "Default Currency",
+   "default": "KES"
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reminder_lead_days",
+   "fieldtype": "Int",
+   "label": "Reminder Lead Days",
+   "default": "3"
+  },
+  {
+   "fieldname": "ctrl_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "enable_commitment_control",
+   "fieldtype": "Check",
+   "label": "Enable Commitment (Encumbrance) Control",
+   "default": "1"
+  },
+  {
+   "fieldname": "block_over_budget",
+   "fieldtype": "Check",
+   "label": "Block Transactions That Exceed Budget",
+   "default": "1",
+   "description": "If unchecked, over-budget transactions are allowed with a warning."
+  },
+  {
+   "fieldname": "def_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "default_budget",
+   "fieldtype": "Link",
+   "label": "Default Budget",
+   "options": "Budget"
+  },
+  {
+   "fieldname": "default_account",
+   "fieldtype": "Data",
+   "label": "Default Expense Account"
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_cost_center",
+   "fieldtype": "Data",
+   "label": "Default Cost Center"
+  }
+ ],
+ "istable": 0,
+ "issingle": 1,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Finance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Finance Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ]
+}

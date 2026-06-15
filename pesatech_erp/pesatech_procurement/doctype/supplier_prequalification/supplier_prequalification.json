@@ -1,0 +1,186 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Supplier Prequalification",
+ "module": "Pesatech Procurement",
+ "owner": "Administrator",
+ "naming_rule": "Expression",
+ "autoname": "format:PQ-{YYYY}-{#####}",
+ "field_order": [
+  "appl_sec",
+  "supplier",
+  "category",
+  "application_date",
+  "cb",
+  "status",
+  "valid_until",
+  "agpo_category",
+  "compliance_sec",
+  "tax_compliance",
+  "business_permit",
+  "incorporation_docs",
+  "cb",
+  "financial_capacity",
+  "not_debarred",
+  "score_sec",
+  "score",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "appl_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "supplier",
+   "fieldtype": "Link",
+   "label": "Supplier",
+   "options": "Supplier",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Link",
+   "label": "Prequalification Category",
+   "options": "Prequalification Category",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "application_date",
+   "fieldtype": "Date",
+   "label": "Application Date"
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nSubmitted\nApproved\nRejected\nExpired",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "valid_until",
+   "fieldtype": "Date",
+   "label": "Valid Until"
+  },
+  {
+   "fieldname": "agpo_category",
+   "fieldtype": "Select",
+   "label": "AGPO Category",
+   "options": "None\nYouth\nWomen\nPersons with Disability",
+   "default": "None"
+  },
+  {
+   "fieldname": "compliance_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tax_compliance",
+   "fieldtype": "Check",
+   "label": "Tax Compliance Certificate"
+  },
+  {
+   "fieldname": "business_permit",
+   "fieldtype": "Check",
+   "label": "Valid Business Permit"
+  },
+  {
+   "fieldname": "incorporation_docs",
+   "fieldtype": "Check",
+   "label": "Certificate of Incorporation"
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "financial_capacity",
+   "fieldtype": "Check",
+   "label": "Financial Capacity Evidence"
+  },
+  {
+   "fieldname": "not_debarred",
+   "fieldtype": "Check",
+   "label": "Not Debarred / Suspended",
+   "default": "1"
+  },
+  {
+   "fieldname": "score_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "label": "Prequalification Score"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 1,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "title_field": "supplier",
+ "permissions": [
+  {
+   "role": "Procurement Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Procurement Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ]
+}

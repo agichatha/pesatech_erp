@@ -1,0 +1,156 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Finance Activity",
+ "module": "Pesatech Finance",
+ "owner": "Administrator",
+ "naming_rule": "Expression",
+ "autoname": "format:FA-{#####}",
+ "field_order": [
+  "a_sec",
+  "activity",
+  "category",
+  "frequency",
+  "cb",
+  "next_due_date",
+  "responsible",
+  "reminder_lead_days",
+  "status",
+  "h_sec",
+  "last_completed",
+  "notes"
+ ],
+ "fields": [
+  {
+   "fieldname": "a_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "activity",
+   "fieldtype": "Data",
+   "label": "Activity",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Select",
+   "label": "Category",
+   "options": "Reconciliation\nTax Filing\nManagement Accounts\nCollections\nPayroll\nAudit\nBudget Review\nOther",
+   "default": "Other",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "frequency",
+   "fieldtype": "Select",
+   "label": "Frequency",
+   "options": "Daily\nWeekly\nMonthly\nQuarterly\nAnnual",
+   "default": "Monthly",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "next_due_date",
+   "fieldtype": "Date",
+   "label": "Next Due Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "responsible",
+   "fieldtype": "Link",
+   "label": "Responsible",
+   "options": "User"
+  },
+  {
+   "fieldname": "reminder_lead_days",
+   "fieldtype": "Int",
+   "label": "Reminder Lead Days",
+   "default": "3"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Pending\nIn Progress\nDone\nOverdue",
+   "default": "Pending",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "h_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "last_completed",
+   "fieldtype": "Date",
+   "label": "Last Completed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "notes",
+   "fieldtype": "Small Text",
+   "label": "Notes"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Finance Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Finance Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ],
+ "title_field": "activity"
+}

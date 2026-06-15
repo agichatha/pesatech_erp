@@ -1,0 +1,139 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "CRM Settings",
+ "module": "Pesatech CRM",
+ "owner": "Administrator",
+ "naming_rule": "",
+ "autoname": "",
+ "field_order": [
+  "sla_sec",
+  "sla_urgent_hours",
+  "sla_high_hours",
+  "cb",
+  "sla_medium_hours",
+  "sla_low_hours",
+  "ret_sec",
+  "renewal_reminder_days",
+  "target_retention_rate"
+ ],
+ "fields": [
+  {
+   "fieldname": "sla_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sla_urgent_hours",
+   "fieldtype": "Int",
+   "label": "Urgent",
+   "default": "4"
+  },
+  {
+   "fieldname": "sla_high_hours",
+   "fieldtype": "Int",
+   "label": "High",
+   "default": "8"
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sla_medium_hours",
+   "fieldtype": "Int",
+   "label": "Medium",
+   "default": "24"
+  },
+  {
+   "fieldname": "sla_low_hours",
+   "fieldtype": "Int",
+   "label": "Low",
+   "default": "48"
+  },
+  {
+   "fieldname": "ret_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "renewal_reminder_days",
+   "fieldtype": "Int",
+   "label": "Renewal Reminder Window (days)",
+   "default": "30"
+  },
+  {
+   "fieldname": "target_retention_rate",
+   "fieldtype": "Percent",
+   "label": "Target Retention Rate",
+   "default": "95"
+  }
+ ],
+ "istable": 0,
+ "issingle": 1,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "Customer Success",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Relationship Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "Product Delivery Lead",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ]
+}

@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Payroll Run",
+ "module": "Pesatech HCM",
+ "owner": "Administrator",
+ "naming_rule": "Expression",
+ "autoname": "format:PAY-{YYYY}-{#####}",
+ "field_order": [
+  "pr_sec",
+  "period",
+  "status",
+  "cb",
+  "total_gross",
+  "total_deductions",
+  "total_net",
+  "e_sec",
+  "entries"
+ ],
+ "fields": [
+  {
+   "fieldname": "pr_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "period",
+   "fieldtype": "Data",
+   "label": "Period (e.g. June 2026)",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "Draft\nProcessed\nPaid",
+   "default": "Draft",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "cb",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_gross",
+   "fieldtype": "Currency",
+   "label": "Total Gross",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "total_deductions",
+   "fieldtype": "Currency",
+   "label": "Total Deductions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_net",
+   "fieldtype": "Currency",
+   "label": "Total Net",
+   "read_only": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "e_sec",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "entries",
+   "fieldtype": "Table",
+   "label": "Entries",
+   "options": "Payroll Entry Line"
+  }
+ ],
+ "istable": 0,
+ "issingle": 0,
+ "is_submittable": 1,
+ "track_changes": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": [
+  {
+   "role": "HR Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "HR Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  },
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1,
+   "submit": 1,
+   "cancel": 1,
+   "amend": 1,
+   "report": 1,
+   "export": 1,
+   "print": 1,
+   "email": 1,
+   "share": 1
+  }
+ ],
+ "title_field": "period"
+}

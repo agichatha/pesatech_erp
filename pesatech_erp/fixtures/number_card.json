@@ -1,0 +1,59 @@
+[
+ {
+  "doctype": "Number Card",
+  "name": "CT Activities Pending",
+  "label": "Activities Pending",
+  "module": "Pesatech Control Tower",
+  "type": "Document Type",
+  "document_type": "Employee Activity",
+  "function": "Count",
+  "filters_json": "[[\"status\", \"=\", \"Pending\"]]",
+  "is_public": 1,
+  "show_percentage_stats": 1,
+  "stats_time_interval": "Daily",
+  "color": "#378ADD"
+ },
+ {
+  "doctype": "Number Card",
+  "name": "CT Activities Overdue",
+  "label": "Activities Overdue",
+  "module": "Pesatech Control Tower",
+  "type": "Document Type",
+  "document_type": "Employee Activity",
+  "function": "Count",
+  "filters_json": "[[\"status\", \"=\", \"Overdue\"]]",
+  "is_public": 1,
+  "show_percentage_stats": 1,
+  "stats_time_interval": "Daily",
+  "color": "#E24B4A"
+ },
+ {
+  "doctype": "Number Card",
+  "name": "CT Objectives At Risk",
+  "label": "Objectives At Risk",
+  "module": "Pesatech Control Tower",
+  "type": "Document Type",
+  "document_type": "Strategic Objective",
+  "function": "Count",
+  "filters_json": "[[\"rag\", \"=\", \"Red\"]]",
+  "is_public": 1,
+  "show_percentage_stats": 1,
+  "stats_time_interval": "Daily",
+  "color": "#EF9F27"
+ },
+ {
+  "doctype": "Number Card",
+  "name": "CT Avg Completion",
+  "label": "Avg Completion Rate",
+  "module": "Pesatech Control Tower",
+  "type": "Document Type",
+  "document_type": "Tower Member",
+  "function": "Average",
+  "filters_json": "[]",
+  "is_public": 1,
+  "show_percentage_stats": 1,
+  "stats_time_interval": "Daily",
+  "color": "#1D9E75",
+  "aggregate_function_based_on": "completion_rate"
+ }
+]

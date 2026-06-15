@@ -1,0 +1,73 @@
+{
+ "actions": [],
+ "creation": "2026-06-15 00:00:00",
+ "modified": "2026-06-15 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "name": "Bid Evaluation Score",
+ "module": "Pesatech Procurement",
+ "owner": "Administrator",
+ "naming_rule": "",
+ "autoname": "",
+ "field_order": [
+  "bid",
+  "criterion",
+  "stage",
+  "score",
+  "weight",
+  "weighted_score"
+ ],
+ "fields": [
+  {
+   "fieldname": "bid",
+   "fieldtype": "Link",
+   "label": "Bid",
+   "options": "Bid",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "criterion",
+   "fieldtype": "Data",
+   "label": "Criterion",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "stage",
+   "fieldtype": "Select",
+   "label": "Stage",
+   "options": "Preliminary\nTechnical\nFinancial",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "score",
+   "fieldtype": "Float",
+   "label": "Score",
+   "in_list_view": 1,
+   "description": "Preliminary: 1 = pass, 0 = fail. Technical/Financial: 0-100."
+  },
+  {
+   "fieldname": "weight",
+   "fieldtype": "Float",
+   "label": "Weight (%)"
+  },
+  {
+   "fieldname": "weighted_score",
+   "fieldtype": "Float",
+   "label": "Weighted Score",
+   "read_only": 1,
+   "in_list_view": 1
+  }
+ ],
+ "istable": 1,
+ "issingle": 0,
+ "is_submittable": 0,
+ "track_changes": 0,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "links": [],
+ "row_format": "Dynamic",
+ "states": [],
+ "permissions": []
+}
