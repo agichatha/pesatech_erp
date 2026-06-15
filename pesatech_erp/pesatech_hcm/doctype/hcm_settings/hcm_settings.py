@@ -5,5 +5,5 @@ import frappe
 from frappe.model.document import Document
 
 
-class HcmSettings(Document):
+class HCMSettings(Document):
 	pass
