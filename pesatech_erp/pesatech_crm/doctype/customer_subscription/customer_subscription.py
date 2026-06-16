@@ -11,7 +11,7 @@ class CustomerSubscription(Document):
 		if self.renewal_date:
 			days = (getdate(self.renewal_date) - getdate(nowdate())).days
 			self.days_to_renewal = days
-			s = frappe.get_single('CRM Settings')
+			s = frappe.get_single('Pesatech CRM Settings')
 			window = s.renewal_reminder_days or 30
 			if self.status == 'Active' and 0 <= days <= window:
 				self.renewal_due = 1

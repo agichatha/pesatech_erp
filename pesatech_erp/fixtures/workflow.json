@@ -216,7 +216,7 @@
   "doctype": "Workflow",
   "name": "Budget Approval",
   "workflow_name": "Budget Approval",
-  "document_type": "Budget",
+  "document_type": "Pesatech Budget",
   "workflow_state_field": "status",
   "is_active": 1,
   "send_email_alert": 0,

@@ -14,7 +14,7 @@ class SupportTicket(Document):
 	def set_sla(self):
 		if self.sla_hours:
 			return
-		s = frappe.get_single('CRM Settings')
+		s = frappe.get_single('Pesatech CRM Settings')
 		mapping = {'Urgent': s.sla_urgent_hours or 4, 'High': s.sla_high_hours or 8,
 			'Medium': s.sla_medium_hours or 24, 'Low': s.sla_low_hours or 48}
 		self.sla_hours = mapping.get(self.priority, 24)

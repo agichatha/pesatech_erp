@@ -76,7 +76,7 @@
    "fieldname": "default_budget",
    "fieldtype": "Link",
    "label": "Default Budget",
-   "options": "Budget"
+   "options": "Pesatech Budget"
   },
   {
    "fieldname": "default_account",

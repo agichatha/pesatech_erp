@@ -41,8 +41,8 @@ def after_install():
         sm.sql_score_threshold = sm.sql_score_threshold or 75
         sm.save(ignore_permissions=True)
 
-    if frappe.db.exists("DocType", "CRM Settings"):
-        cs = frappe.get_single("CRM Settings")
+    if frappe.db.exists("DocType", "Pesatech CRM Settings"):
+        cs = frappe.get_single("Pesatech CRM Settings")
         cs.sla_urgent_hours = cs.sla_urgent_hours or 4
         cs.sla_high_hours = cs.sla_high_hours or 8
         cs.sla_medium_hours = cs.sla_medium_hours or 24

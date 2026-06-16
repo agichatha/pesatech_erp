@@ -21,7 +21,7 @@ class BudgetCommitment(Document):
 		# Reserve (sign=+1) or release (sign=-1) the amount on the matching budget line
 		if not (self.budget and self.account):
 			return
-		budget = frappe.get_doc('Budget', self.budget)
+		budget = frappe.get_doc('Pesatech Budget', self.budget)
 		matched = False
 		for line in (budget.lines or []):
 			if line.account == self.account and (

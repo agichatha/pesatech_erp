@@ -10,8 +10,8 @@ def get_active_budget(fiscal_year=None, cost_center=None):
 		filters['fiscal_year'] = fiscal_year
 	if cost_center:
 		filters['cost_center'] = cost_center
-	name = frappe.db.get_value('Budget', filters, 'name')
-	return frappe.get_doc('Budget', name) if name else None
+	name = frappe.db.get_value('Pesatech Budget', filters, 'name')
+	return frappe.get_doc('Pesatech Budget', name) if name else None
 
 
 def check_budget_available(account, cost_center, amount, fiscal_year=None):

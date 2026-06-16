@@ -84,7 +84,7 @@
    "fieldname": "payroll_budget",
    "fieldtype": "Link",
    "label": "Payroll Budget",
-   "options": "Budget"
+   "options": "Pesatech Budget"
   },
   {
    "fieldname": "cb",

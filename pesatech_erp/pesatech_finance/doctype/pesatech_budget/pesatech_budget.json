@@ -4,54 +4,45 @@
  "modified": "2026-06-15 00:00:00",
  "doctype": "DocType",
  "engine": "InnoDB",
- "name": "Budget Commitment",
+ "name": "Pesatech Budget",
  "module": "Pesatech Finance",
  "owner": "Administrator",
  "naming_rule": "Expression",
- "autoname": "format:COM-{YYYY}-{#####}",
+ "autoname": "format:BUD-{fiscal_year}-{#####}",
  "field_order": [
-  "c_sec",
-  "budget",
-  "account",
+  "b_sec",
+  "budget_name",
+  "fiscal_year",
   "cost_center",
-  "amount",
   "cb",
   "status",
-  "commitment_date",
-  "ref_sec",
-  "reference_doctype",
-  "reference_name",
-  "remarks"
+  "total_budget",
+  "lines_sec",
+  "lines"
  ],
  "fields": [
   {
-   "fieldname": "c_sec",
+   "fieldname": "b_sec",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "budget",
-   "fieldtype": "Link",
-   "label": "Budget",
-   "options": "Pesatech Budget",
+   "fieldname": "budget_name",
+   "fieldtype": "Data",
+   "label": "Budget Name",
+   "reqd": 1,
    "in_list_view": 1
   },
   {
-   "fieldname": "account",
+   "fieldname": "fiscal_year",
    "fieldtype": "Data",
-   "label": "Expense Account",
+   "label": "Fiscal Year",
+   "reqd": 1,
    "in_list_view": 1
   },
   {
    "fieldname": "cost_center",
    "fieldtype": "Data",
-   "label": "Cost Center"
-  },
-  {
-   "fieldname": "amount",
-   "fieldtype": "Currency",
-   "label": "Amount (KES)",
-   "reqd": 1,
-   "in_list_view": 1
+   "label": "Default Cost Center"
   },
   {
    "fieldname": "cb",
@@ -61,35 +52,26 @@
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Status",
-   "options": "Reserved\nConsumed\nReleased",
-   "default": "Reserved",
+   "options": "Draft\nSubmitted\nApproved\nClosed",
+   "default": "Draft",
    "in_list_view": 1
   },
   {
-   "fieldname": "commitment_date",
-   "fieldtype": "Date",
-   "label": "Commitment Date"
+   "fieldname": "total_budget",
+   "fieldtype": "Currency",
+   "label": "Total Budget",
+   "read_only": 1,
+   "in_list_view": 1
   },
   {
-   "fieldname": "ref_sec",
+   "fieldname": "lines_sec",
    "fieldtype": "Section Break"
   },
   {
-   "fieldname": "reference_doctype",
-   "fieldtype": "Data",
-   "label": "Reference DocType",
-   "in_list_view": 1
-  },
-  {
-   "fieldname": "reference_name",
-   "fieldtype": "Data",
-   "label": "Reference Name",
-   "in_list_view": 1
-  },
-  {
-   "fieldname": "remarks",
-   "fieldtype": "Small Text",
-   "label": "Remarks"
+   "fieldname": "lines",
+   "fieldtype": "Table",
+   "label": "Lines",
+   "options": "Budget Line"
   }
  ],
  "istable": 0,
@@ -145,5 +127,6 @@
    "email": 1,
    "share": 1
   }
- ]
+ ],
+ "title_field": "budget_name"
 }
