@@ -139,3 +139,19 @@ def seed_demo():
 
 	frappe.db.commit()
 	return out
+
+
+@frappe.whitelist()
+def get_dashboard():
+	"""Single endpoint powering the /control-tower page (fetched client-side)."""
+	data = get_leadership_summary()
+	counts = {}
+	for r in frappe.get_all("Employee Activity",
+			fields=["status", "count(name) as c"], group_by="status",
+			ignore_permissions=True):
+		counts[r.status] = r.c
+	data["counts"] = counts
+	data["pending"] = counts.get("Pending", 0)
+	data["overdue"] = counts.get("Overdue", 0)
+	data["done"] = counts.get("Done", 0)
+	return data

@@ -23,40 +23,19 @@
   <p class="text-muted">Strategy execution &middot; live leadership view</p>
 
   <div class="ct-cards">
-    <div class="ct-card"><div class="lbl">Activities pending</div><div class="val">{{ pending }}</div></div>
-    <div class="ct-card"><div class="lbl">Activities overdue</div><div class="val" style="color:#c0392b;">{{ overdue }}</div></div>
-    <div class="ct-card"><div class="lbl">Activities done</div><div class="val" style="color:#1d9e75;">{{ done }}</div></div>
-    <div class="ct-card"><div class="lbl">Objectives tracked</div><div class="val">{{ objectives|length }}</div></div>
+    <div class="ct-card"><div class="lbl">Activities pending</div><div class="val" id="ct-pending">&mdash;</div></div>
+    <div class="ct-card"><div class="lbl">Activities overdue</div><div class="val" id="ct-overdue" style="color:#c0392b;">&mdash;</div></div>
+    <div class="ct-card"><div class="lbl">Activities done</div><div class="val" id="ct-done" style="color:#1d9e75;">&mdash;</div></div>
+    <div class="ct-card"><div class="lbl">Objectives tracked</div><div class="val" id="ct-objcount">&mdash;</div></div>
   </div>
 
   <div class="ct-sec">Strategic objective progress</div>
-  {% for o in objectives %}
-    {% set p = o.progress or 0 %}
-    {% set col = "#1D9E75" if p >= 80 else ("#EF9F27" if p >= 70 else "#E24B4A") %}
-    <div class="ct-obj">
-      <div class="row"><span>{{ o.objective_name }}</span><span style="color:{{ col }};font-weight:500;">{{ p }}%</span></div>
-      <div class="ct-bar"><span style="width:{{ p }}%;background:{{ col }};"></span></div>
-    </div>
-  {% else %}
-    <p class="text-muted">No strategic objectives yet. Create them under Control Tower &rsaquo; Strategic Objective.</p>
-  {% endfor %}
+  <div id="ct-objectives"><p class="text-muted">Loading&hellip;</p></div>
 
   <div class="ct-sec">Leaderboard</div>
   <table class="ct-lead">
     <thead><tr><th>#</th><th>Member</th><th>Points</th><th>Streak</th><th>Completion</th></tr></thead>
-    <tbody>
-    {% for m in leaderboard %}
-      <tr>
-        <td>{{ loop.index }}</td>
-        <td>{{ m.employee }}</td>
-        <td>{{ m.points_total or 0 }}</td>
-        <td>{{ m.current_streak or 0 }}</td>
-        <td>{{ m.completion_rate or 0 }}%</td>
-      </tr>
-    {% else %}
-      <tr><td colspan="5" class="text-muted">No members yet.</td></tr>
-    {% endfor %}
-    </tbody>
+    <tbody id="ct-leaderboard"><tr><td colspan="5" class="text-muted">Loading&hellip;</td></tr></tbody>
   </table>
 
   <div class="ct-sec">Activity status</div>
@@ -67,18 +46,59 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
-  (function(){
-    var counts = {{ (status_counts or {}) | tojson }};
-    var labels = Object.keys(counts), vals = labels.map(function(k){return counts[k];});
-    var colors = {Pending:"#378ADD", Overdue:"#E24B4A", Done:"#1D9E75"};
-    var bg = labels.map(function(k){return colors[k] || "#888780";});
-    if(window.Chart && labels.length){
-      new Chart(document.getElementById("ctStatus"), {
-        type:"doughnut",
-        data:{labels:labels, datasets:[{data:vals, backgroundColor:bg}]},
-        options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"right"}}}
-      });
-    }
-  })();
+(function(){
+  function esc(s){var d=document.createElement("div");d.textContent=(s==null?"":s);return d.innerHTML;}
+
+  fetch("/api/method/pesatech_erp.pesatech_control_tower.api.get_dashboard",
+        {headers:{"Accept":"application/json"}, credentials:"same-origin"})
+    .then(function(r){return r.json();})
+    .then(function(res){
+      var d = (res && res.message) || {};
+      var objectives = d.objectives || [], leaderboard = d.leaderboard || [], counts = d.counts || {};
+
+      document.getElementById("ct-pending").textContent  = d.pending || 0;
+      document.getElementById("ct-overdue").textContent  = d.overdue || 0;
+      document.getElementById("ct-done").textContent     = d.done || 0;
+      document.getElementById("ct-objcount").textContent = objectives.length;
+
+      var ob = document.getElementById("ct-objectives");
+      if(objectives.length){
+        ob.innerHTML = objectives.map(function(o){
+          var p = o.progress || 0;
+          var col = p>=80 ? "#1D9E75" : (p>=70 ? "#EF9F27" : "#E24B4A");
+          return '<div class="ct-obj"><div class="row"><span>'+esc(o.objective_name)+
+            '</span><span style="color:'+col+';font-weight:500;">'+p+'%</span></div>'+
+            '<div class="ct-bar"><span style="width:'+p+'%;background:'+col+';"></span></div></div>';
+        }).join("");
+      } else {
+        ob.innerHTML = '<p class="text-muted">No strategic objectives yet.</p>';
+      }
+
+      var lb = document.getElementById("ct-leaderboard");
+      if(leaderboard.length){
+        lb.innerHTML = leaderboard.map(function(m,i){
+          return '<tr><td>'+(i+1)+'</td><td>'+esc(m.employee)+'</td><td>'+(m.points_total||0)+
+            '</td><td>'+(m.current_streak||0)+'</td><td>'+(m.completion_rate||0)+'%</td></tr>';
+        }).join("");
+      } else {
+        lb.innerHTML = '<tr><td colspan="5" class="text-muted">No members yet.</td></tr>';
+      }
+
+      var labels = Object.keys(counts), vals = labels.map(function(k){return counts[k];});
+      var colors = {Pending:"#378ADD", Overdue:"#E24B4A", Done:"#1D9E75"};
+      var bg = labels.map(function(k){return colors[k] || "#888780";});
+      if(window.Chart && labels.length){
+        new Chart(document.getElementById("ctStatus"), {
+          type:"doughnut",
+          data:{labels:labels, datasets:[{data:vals, backgroundColor:bg}]},
+          options:{responsive:true, maintainAspectRatio:false, plugins:{legend:{position:"right"}}}
+        });
+      }
+    })
+    .catch(function(e){
+      document.getElementById("ct-objectives").innerHTML =
+        '<p class="text-muted">Could not load dashboard data. Please ensure you are logged in.</p>';
+    });
+})();
 </script>
 {% endblock %}
