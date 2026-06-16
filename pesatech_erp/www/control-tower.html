@@ -68,7 +68,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
 <script>
   (function(){
-    var counts = {{ status_counts | tojson }};
+    var counts = {{ (status_counts or {}) | tojson }};
     var labels = Object.keys(counts), vals = labels.map(function(k){return counts[k];});
     var colors = {Pending:"#378ADD", Overdue:"#E24B4A", Done:"#1D9E75"};
     var bg = labels.map(function(k){return colors[k] || "#888780";});
