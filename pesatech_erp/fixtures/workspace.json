@@ -61,5 +61,294 @@
    }
   ],
   "links": []
+ },
+ {
+  "doctype": "Workspace",
+  "name": "Procurement",
+  "title": "Procurement",
+  "label": "Procurement",
+  "module": "Pesatech Procurement",
+  "public": 1,
+  "is_hidden": 0,
+  "icon": "tasks",
+  "sequence_id": 101.0,
+  "content": "[{\"id\": \"hdr\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Procurement</b></span>\", \"col\": 12}}, {\"id\": \"mng\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h5\\\"><b>Manage</b></span>\", \"col\": 12}}, {\"id\": \"s0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sourcing Events\", \"col\": 3}}, {\"id\": \"s1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Bids\", \"col\": 3}}, {\"id\": \"s2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Bid Evaluations\", \"col\": 3}}, {\"id\": \"s3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Bid Openings\", \"col\": 3}}, {\"id\": \"s4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Awards\", \"col\": 3}}, {\"id\": \"s5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Prequalifications\", \"col\": 3}}, {\"id\": \"s6\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Committees\", \"col\": 3}}, {\"id\": \"s7\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Criteria Templates\", \"col\": 3}}, {\"id\": \"s8\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Prequal Categories\", \"col\": 3}}, {\"id\": \"s9\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Settings\", \"col\": 3}}]",
+  "number_cards": [],
+  "charts": [],
+  "shortcuts": [
+   {
+    "type": "DocType",
+    "link_to": "Sourcing Event",
+    "label": "Sourcing Events",
+    "color": "Blue"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Bid",
+    "label": "Bids",
+    "color": "Green"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Bid Evaluation",
+    "label": "Bid Evaluations",
+    "color": "Yellow"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Bid Opening Register",
+    "label": "Bid Openings",
+    "color": "Purple"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Procurement Award",
+    "label": "Awards",
+    "color": "Orange"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Supplier Prequalification",
+    "label": "Prequalifications",
+    "color": "Cyan"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Evaluation Committee",
+    "label": "Committees",
+    "color": "Pink"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Evaluation Criteria Template",
+    "label": "Criteria Templates",
+    "color": "Grey"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Prequalification Category",
+    "label": "Prequal Categories",
+    "color": "Blue"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Procurement Settings",
+    "label": "Settings",
+    "color": "Green"
+   }
+  ],
+  "links": []
+ },
+ {
+  "doctype": "Workspace",
+  "name": "Finance",
+  "title": "Finance",
+  "label": "Finance",
+  "module": "Pesatech Finance",
+  "public": 1,
+  "is_hidden": 0,
+  "icon": "accounting",
+  "sequence_id": 102.0,
+  "content": "[{\"id\": \"hdr\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Finance</b></span>\", \"col\": 12}}, {\"id\": \"mng\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h5\\\"><b>Manage</b></span>\", \"col\": 12}}, {\"id\": \"s0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Budgets\", \"col\": 3}}, {\"id\": \"s1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Commitments\", \"col\": 3}}, {\"id\": \"s2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Finance Activities\", \"col\": 3}}, {\"id\": \"s3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Settings\", \"col\": 3}}]",
+  "number_cards": [],
+  "charts": [],
+  "shortcuts": [
+   {
+    "type": "DocType",
+    "link_to": "Pesatech Budget",
+    "label": "Budgets",
+    "color": "Blue"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Budget Commitment",
+    "label": "Commitments",
+    "color": "Green"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Finance Activity",
+    "label": "Finance Activities",
+    "color": "Yellow"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Finance Settings",
+    "label": "Settings",
+    "color": "Purple"
+   }
+  ],
+  "links": []
+ },
+ {
+  "doctype": "Workspace",
+  "name": "Human Capital",
+  "title": "Human Capital",
+  "label": "Human Capital",
+  "module": "Pesatech HCM",
+  "public": 1,
+  "is_hidden": 0,
+  "icon": "hr",
+  "sequence_id": 103.0,
+  "content": "[{\"id\": \"hdr\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Human Capital</b></span>\", \"col\": 12}}, {\"id\": \"mng\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h5\\\"><b>Manage</b></span>\", \"col\": 12}}, {\"id\": \"s0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Position Contracts\", \"col\": 3}}, {\"id\": \"s1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Onboarding\", \"col\": 3}}, {\"id\": \"s2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payroll Runs\", \"col\": 3}}, {\"id\": \"s3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Performance Reviews\", \"col\": 3}}, {\"id\": \"s4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Settings\", \"col\": 3}}]",
+  "number_cards": [],
+  "charts": [],
+  "shortcuts": [
+   {
+    "type": "DocType",
+    "link_to": "Position Contract",
+    "label": "Position Contracts",
+    "color": "Blue"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Onboarding",
+    "label": "Onboarding",
+    "color": "Green"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Payroll Run",
+    "label": "Payroll Runs",
+    "color": "Yellow"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Performance Review",
+    "label": "Performance Reviews",
+    "color": "Purple"
+   },
+   {
+    "type": "DocType",
+    "link_to": "HCM Settings",
+    "label": "Settings",
+    "color": "Orange"
+   }
+  ],
+  "links": []
+ },
+ {
+  "doctype": "Workspace",
+  "name": "Sales & Marketing",
+  "title": "Sales & Marketing",
+  "label": "Sales & Marketing",
+  "module": "Pesatech Sales Marketing",
+  "public": 1,
+  "is_hidden": 0,
+  "icon": "sell",
+  "sequence_id": 104.0,
+  "content": "[{\"id\": \"hdr\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Sales & Marketing</b></span>\", \"col\": 12}}, {\"id\": \"mng\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h5\\\"><b>Manage</b></span>\", \"col\": 12}}, {\"id\": \"s0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pipeline Leads\", \"col\": 3}}, {\"id\": \"s1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sales Deals\", \"col\": 3}}, {\"id\": \"s2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sales Agents\", \"col\": 3}}, {\"id\": \"s3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Pricing Plans\", \"col\": 3}}, {\"id\": \"s4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Partners\", \"col\": 3}}, {\"id\": \"s5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Content Topics\", \"col\": 3}}, {\"id\": \"s6\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Content Calendar\", \"col\": 3}}, {\"id\": \"s7\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Scorecards\", \"col\": 3}}, {\"id\": \"s8\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Settings\", \"col\": 3}}]",
+  "number_cards": [],
+  "charts": [],
+  "shortcuts": [
+   {
+    "type": "DocType",
+    "link_to": "Pipeline Lead",
+    "label": "Pipeline Leads",
+    "color": "Blue"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Sales Deal",
+    "label": "Sales Deals",
+    "color": "Green"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Sales Agent",
+    "label": "Sales Agents",
+    "color": "Yellow"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Pricing Plan",
+    "label": "Pricing Plans",
+    "color": "Purple"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Cooperative Partner",
+    "label": "Partners",
+    "color": "Orange"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Content Topic",
+    "label": "Content Topics",
+    "color": "Cyan"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Content Post",
+    "label": "Content Calendar",
+    "color": "Pink"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Weekly Marketing Scorecard",
+    "label": "Scorecards",
+    "color": "Grey"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Sales Marketing Settings",
+    "label": "Settings",
+    "color": "Blue"
+   }
+  ],
+  "links": []
+ },
+ {
+  "doctype": "Workspace",
+  "name": "Customer Relations",
+  "title": "Customer Relations",
+  "label": "Customer Relations",
+  "module": "Pesatech CRM",
+  "public": 1,
+  "is_hidden": 0,
+  "icon": "crm",
+  "sequence_id": 105.0,
+  "content": "[{\"id\": \"hdr\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h4\\\"><b>Customer Relations</b></span>\", \"col\": 12}}, {\"id\": \"mng\", \"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h5\\\"><b>Manage</b></span>\", \"col\": 12}}, {\"id\": \"s0\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Onboarding Projects\", \"col\": 3}}, {\"id\": \"s1\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Subscriptions\", \"col\": 3}}, {\"id\": \"s2\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Support Tickets\", \"col\": 3}}, {\"id\": \"s3\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Feedback\", \"col\": 3}}, {\"id\": \"s4\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Customer Exits\", \"col\": 3}}, {\"id\": \"s5\", \"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Settings\", \"col\": 3}}]",
+  "number_cards": [],
+  "charts": [],
+  "shortcuts": [
+   {
+    "type": "DocType",
+    "link_to": "Onboarding Project",
+    "label": "Onboarding Projects",
+    "color": "Blue"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Customer Subscription",
+    "label": "Subscriptions",
+    "color": "Green"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Support Ticket",
+    "label": "Support Tickets",
+    "color": "Yellow"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Customer Feedback",
+    "label": "Feedback",
+    "color": "Purple"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Customer Exit",
+    "label": "Customer Exits",
+    "color": "Orange"
+   },
+   {
+    "type": "DocType",
+    "link_to": "Pesatech CRM Settings",
+    "label": "Settings",
+    "color": "Cyan"
+   }
+  ],
+  "links": []
  }
 ]

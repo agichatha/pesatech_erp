@@ -18,7 +18,10 @@ fixtures = [
     ]]]},
     {"dt": "Number Card", "filters": [["module", "=", "Pesatech Control Tower"]]},
     {"dt": "Dashboard Chart", "filters": [["module", "=", "Pesatech Control Tower"]]},
-    {"dt": "Workspace", "filters": [["module", "=", "Pesatech Control Tower"]]},
+    {"dt": "Workspace", "filters": [["module", "in", [
+        "Pesatech Control Tower", "Pesatech Procurement", "Pesatech Finance",
+        "Pesatech HCM", "Pesatech Sales Marketing", "Pesatech CRM",
+    ]]]},
     {"dt": "Workflow", "filters": [["name", "in", [
         "Supplier Prequalification Approval",
         "Sourcing Event Approval",
