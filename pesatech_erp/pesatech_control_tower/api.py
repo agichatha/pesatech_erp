@@ -61,10 +61,11 @@ def get_leadership_summary():
 	"""Roll-up powering the leadership dashboard: team completion, leaderboard,
 	and objective progress."""
 	objectives = frappe.get_all('Strategic Objective',
-		fields=['name', 'objective_name', 'progress', 'rag'])
+		fields=['name', 'objective_name', 'progress', 'rag'],
+		ignore_permissions=True)
 	leaderboard = frappe.get_all('Tower Member',
 		fields=['employee', 'points_total', 'current_streak', 'completion_rate'],
-		order_by='points_total desc', limit_page_length=10)
+		order_by='points_total desc', limit_page_length=10, ignore_permissions=True)
 	return {'objectives': objectives, 'leaderboard': leaderboard}
 
 

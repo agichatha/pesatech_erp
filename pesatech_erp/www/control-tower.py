@@ -26,7 +26,8 @@ def get_context(context):
 	try:
 		counts = {}
 		for r in frappe.get_all(
-			"Employee Activity", fields=["status", "count(name) as c"], group_by="status"
+			"Employee Activity", fields=["status", "count(name) as c"],
+			group_by="status", ignore_permissions=True
 		):
 			counts[r.status] = r.c
 		context.status_counts = counts
