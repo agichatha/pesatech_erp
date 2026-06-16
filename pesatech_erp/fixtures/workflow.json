@@ -206,7 +206,7 @@
    },
    {
     "action": "Cancel",
-    "state": "Pending Approval",
+    "state": "Approved",
     "next_state": "Cancelled",
     "allowed": "Procurement Manager"
    }
